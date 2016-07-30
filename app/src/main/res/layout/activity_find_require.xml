@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/lightgrey"
+                tools:context="com.xhb.onlystar.newcardata.FindRequireActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/toolbar_title"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/ToolBar_bg">
+
+        <ImageButton
+            android:id="@+id/button_back"
+            android:layout_width="45.0dip"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@color/ToolBar_bg"
+            android:onClick="back"
+            android:paddingTop="20dp"
+            android:src="@mipmap/back"
+            android:text="返回"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/font_size_16"/>
+
+        <TextView
+            android:id="@+id/textview_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignBaseline="@+id/button_back"
+            android:layout_alignBottom="@+id/button_back"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:paddingTop="20dp"
+            android:text="查询"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tip"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar_title"
+        android:gravity="bottom"
+        android:layout_marginLeft="10dp"
+        android:text="车型及车辆识别码可只输入关键字查询哦!"
+        android:textColor="@color/red"
+        android:textSize="12sp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tip"
+        android:background="@color/white"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/text_rwrq"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/rwrq"
+            android:layout_toStartOf="@+id/rwrq"
+            android:gravity="center"
+            android:text="任务日期:"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/font_size_14"/>
+
+        <TextView
+            android:id="@+id/rwrq"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@+id/text_cx"
+            android:layout_toRightOf="@+id/text_cx"
+            android:backgroundTint="@color/gray"
+            android:gravity="center_vertical"
+            android:hint="请选择任务日期"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/font_size_14"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/rwrq"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/text_rwrq"
+            android:background="@color/gray"/>
+
+        <TextView
+            android:id="@+id/text_cx"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/text_rwrq"
+            android:layout_toLeftOf="@+id/cx"
+            android:layout_toStartOf="@+id/cx"
+            android:gravity="center"
+            android:text="车型:"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/font_size_14"/>
+
+        <EditText
+            android:id="@+id/cx"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/rwrq"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@+id/text_clsbm"
+            android:layout_toRightOf="@+id/text_clsbm"
+            android:backgroundTint="@color/gray"
+            android:hint="请输入车型"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/font_size_14"/>
+
+        <TextView
+            android:id="@+id/text_clsbm"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/text_cx"
+            android:gravity="center"
+            android:text="车辆识别码:"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/font_size_14"/>
+
+        <EditText
+            android:id="@+id/clsbm"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/cx"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/text_clsbm"
+            android:backgroundTint="@color/gray"
+            android:hint="请输入车辆识别码"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/font_size_14"/>
+
+
+        <TextView
+            android:id="@+id/text_pzzt"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/text_clsbm"
+            android:layout_toLeftOf="@+id/cx"
+            android:layout_toStartOf="@+id/cx"
+            android:gravity="center"
+            android:text="状态:"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/font_size_14"/>
+
+        <Spinner
+            android:id="@+id/pzzt"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/clsbm"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@+id/text_clsbm"
+            android:layout_toRightOf="@+id/text_clsbm"
+            android:backgroundTint="@color/gray"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_14"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/exit_btn_selector"
+            android:onClick="cancel"
+            android:text="取消"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_14"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_selector"
+            android:onClick="sure"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_14"/>
+
+    </LinearLayout>
+</RelativeLayout>

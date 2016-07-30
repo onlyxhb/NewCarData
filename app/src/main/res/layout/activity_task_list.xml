@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ToolBar_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/ToolBar_bg"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:minHeight="?attr/actionBarSize">
+
+            <ImageButton
+                android:paddingRight="10dp"
+                android:id="@+id/send"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:src="@mipmap/scanner"
+                android:textSize="@dimen/font_size_14"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"/>
+
+            <!--android:iconifiedByDefault表示搜索图标是否在输入框内。true效果更加
+                android:imeOptions设置IME options，即输入法的回车键的功能，可以是搜索、下一个、发送、完成等等。这里actionSearch表示搜索
+                android:inputType输入框文本类型，可控制输入法键盘样式，如numberPassword即为数字密码样式
+                android:queryHint输入框默认文本-->
+            <SearchView
+                android:id="@+id/search_view"
+                android:layout_toLeftOf="@id/send"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:imeOptions="actionSearch"
+                android:background="@color/white"
+                android:iconifiedByDefault="false"
+                android:inputType="textFilter"
+                android:queryHint="请输入要查找的车辆识别码"/>
+
+            <ListView
+                android:id="@+id/lv"
+                android:visibility="gone"
+                android:layout_below="@id/search_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#969696"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/line_Top"
+            android:background="@color/lightgrey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/msg_rwdh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="任务单号："
+                android:textColor="@color/gray"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/rwdh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/msg_rwdh"
+                android:gravity="center"
+                android:text="RW2016042603"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/font_size_14" />
+
+            <TextView
+                android:id="@+id/rwsj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/gray"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <com.cjj.MaterialRefreshLayout
+            android:id="@+id/refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:overlay="false"
+            app:progress_colors="@array/material_colors"
+            app:wave_color="#90ffffff"
+            app:wave_height_type="higher"
+            app:wave_show="false">
+
+            <android.support.v7.widget.RecyclerView
+                android:background="@color/lightgrey"
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.cjj.MaterialRefreshLayout>
+    </LinearLayout>
+</FrameLayout>

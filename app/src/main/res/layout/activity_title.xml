@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="50dp"
+    android:background="@color/ToolBar_bg">
+
+    <ImageButton
+        android:id="@+id/button_back"
+        android:layout_width="45.0dip"
+        android:paddingTop="20dp"
+        android:text="返回"
+        android:src="@mipmap/back"
+        android:background="@color/ToolBar_bg"
+        android:textColor="@android:color/black"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true" />
+
+    <TextView
+        android:id="@+id/textview_title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignBaseline="@+id/button_back"
+        android:layout_alignBottom="@+id/button_back"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:paddingTop="20dp"
+        android:text="车辆识别码扫描"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/font_size_16" />
+
+</RelativeLayout>

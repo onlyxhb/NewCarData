@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_app_sign"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/list_item_text">
+
+
+    <TextView
+        android:id="@+id/center_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+    <Button
+        android:id="@+id/app_sign_in"
+        android:layout_width="@dimen/app_sign_btn_w"
+        android:layout_height="@dimen/app_sign_btn_h"
+        android:layout_above="@id/center_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/app_sign_btn_selector"
+        android:text="签到"/>
+
+    <Button
+        android:id="@+id/app_sign_out"
+        android:layout_width="@dimen/app_sign_btn_w"
+        android:layout_height="@dimen/app_sign_btn_h"
+        android:layout_below="@id/center_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/app_sign_btn_selector"
+        android:text="签退"/>
+
+    <TextView
+        android:id="@+id/text_wz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="10dp"
+        android:text="位置"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/wz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/text_wz"
+        android:padding="10dp"
+        android:text="暂无"/>
+
+</RelativeLayout>

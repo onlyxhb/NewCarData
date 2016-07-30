@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/car_data_title"
+        android:background="@color/ToolBar_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/rwzb_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:background="@color/ToolBar_bg"
+            android:gravity="center"
+            android:minHeight="?attr/actionBarSize"
+            android:text="车辆信息"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_16"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/loading"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/rwzb_title"
+            android:src="@drawable/loading"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+
+
+ <!--   <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="空页面"
+        android:textSize="@dimen/font_size_14"
+        android:textColor="@color/black"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textView2"/>-->
+
+
+
+
+    <LinearLayout
+        android:layout_below="@id/car_data_title"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical">
+
+        <Button
+            android:id="@+id/importImg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="本地图片查看" />
+
+        <Button
+            android:id="@+id/takePhoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="拍照" />
+
+        <LinearLayout
+            android:id="@+id/ll_progress"
+            android:visibility="gone"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="识别中"/>
+        </LinearLayout>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+</RelativeLayout>

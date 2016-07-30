@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">车辆监管</string>
+    <string name="app_disc">和协商务软件出品</string>
+    <string name="menu_settings">Settings</string>
+    <string name="scan_text">将车辆识别码放入框内, 即可自动扫描</string>
+    <!-- 图片浏览 -->
+    <string name="only_choose_num">超出可选图片张数</string>
+    <string name="finish">完成</string>
+    <string name="invalidSD">sdcard无效或没有插入！</string>
+    <string name="photo">选择相册</string>
+    <string name="album">相册</string>
+    <string name="preview">预览</string>
+    <string name="unfinished">完成</string>
+    <string name="camera_cancel">取消</string>
+    <string name="no_photo">相册没有图片</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="tab_task_list">任务列表</string>
+    <string name="tab_car_info">车辆信息</string>
+    <string name="tab_other_fun">其他功能</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

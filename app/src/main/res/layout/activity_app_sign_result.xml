@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/list_item_text">
+
+    <TextView
+        android:id="@+id/app_sign_result"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/app_sign_result_selector"
+        android:gravity="center"
+        android:text="签到成功"
+        android:textColor="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/app_sign_result_err"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_sign_result"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/red"
+        android:visibility="gone"
+        />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="@dimen/app_sign_btn_w"
+        android:layout_height="@dimen/app_sign_btn_h"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/app_sign_btn_selector"
+        android:text="返回"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.xhb.onlystar.newcardata.DataDetailActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/ToolBar_bg"
+        android:gravity="center"
+        android:minHeight="?attr/actionBarSize"
+        android:paddingTop="20dp"
+        android:text="任务详情"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/cx"
+        style="@style/car_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:text="车型:DC7163LKAM" />
+
+    <TextView
+        android:id="@+id/pzr"
+        style="@style/car_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingLeft="10dp"
+        android:right="@+id/car_num_show"
+        android:singleLine="true"
+        android:text="拍照人:张三" />
+
+    <TextView
+        android:id="@+id/pzsj"
+        style="@style/car_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingLeft="10dp"
+        android:right="@+id/car_num_show"
+        android:singleLine="true"
+        android:text="拍照时间:2016-04-26 15:34:52" />
+
+
+    <TextView
+        android:id="@+id/clsbm"
+        style="@style/car_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingLeft="10dp"
+        android:right="@+id/car_num_show"
+        android:singleLine="true"
+        android:text="VIN码:9787560612539" />
+
+    <TextView
+        android:id="@+id/text_detail"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:right="@+id/car_num_show"
+        android:text="这里是对任务的详细描述"
+        android:textColor="@color/black" />
+
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@color/ToolBar_bg"
+        android:text="未上传" />
+
+    <TextView
+        android:id="@+id/reason"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingLeft="10dp"
+        android:right="@+id/car_num_show"
+        android:singleLine="true"
+        android:text="上传失败的原因"
+        android:textColor="@color/gray"
+        android:visibility="gone" />
+</LinearLayout>

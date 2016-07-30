@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="MyToolBar">
+        <attr name="rightButtonIcon" format="reference"/>
+        <attr name="isShowSearchView" format="boolean"/>
+        <attr name="rightButtonText" format="string"/>
+
+    </declare-styleable>
+
+    <declare-styleable name="image_and_text">
+        <attr name="text" format="string|reference" />
+        <attr name="image_bg" format="reference" />
+        <attr name="text_color" format="reference" />
+    </declare-styleable>
+
+</resources>

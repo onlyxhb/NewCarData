@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/ToolBar_bg">
+
+    <LinearLayout
+        android:id="@+id/rwzb_line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/rwzb_title"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:background="@color/ToolBar_bg"
+                android:gravity="center"
+                android:text="任务总表"
+
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_18"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/loading"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/rwzb_title"
+                android:src="@drawable/loading"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/date_selecotr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rwzb_title"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:background="@color/ToolBar_bg"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_14"/>
+        </RelativeLayout>
+
+        <com.cjj.MaterialRefreshLayout
+            android:id="@+id/refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:overlay="false"
+            app:progress_colors="@array/material_colors"
+            app:wave_color="#90ffffff"
+            app:wave_height_type="higher"
+            app:wave_show="false">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/lightgrey"/>
+        </com.cjj.MaterialRefreshLayout>
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/bottom_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|bottom"
+        android:layout_marginBottom="80dp"
+        android:layout_marginLeft="16dp"
+        android:background="@mipmap/icon_send"
+        android:src="@mipmap/add"
+        app:backgroundTint="#07A1BE"
+        app:borderWidth="0dp"/>
+
+</FrameLayout>

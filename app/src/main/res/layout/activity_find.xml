@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/ToolBar_bg"
+            android:minHeight="?attr/actionBarSize">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:paddingTop="20dp"
+                android:text="查询信息"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_14"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <com.cjj.MaterialRefreshLayout
+            android:id="@+id/refresh_layout_upload"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:overlay="false"
+            app:progress_colors="@array/material_colors"
+            app:wave_color="#90ffffff"
+            app:wave_height_type="higher"
+            app:wave_show="false">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_upload"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+        </com.cjj.MaterialRefreshLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
